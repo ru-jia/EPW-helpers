@@ -174,9 +174,9 @@ def convert(source):
     for hour_of_year, row in enumerate(rows, start=1):
         output_lines.append(convert_row(row, hour_of_year))
 
-    # Everything is checked before anything is written, so a bad input never
-    # leaves a half-written file behind. Mode 'x' refuses to overwrite an
-    # existing .109 file. Lines end with CRLF (Windows line endings), which
+    # Everything is checked before anything is written, so no half-written files. 
+    # Mode 'x' refuses to overwrite an existing .109 file. 
+    # Lines end with CRLF (Windows line endings), which
     # some older .109 readers require.
     with target.open('x', encoding='ascii', newline='') as stream:
         stream.write('\r\n'.join(output_lines) + '\r\n')
