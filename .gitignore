@@ -1,0 +1,11 @@
+# Weather data and generated outputs
+*.epw
+*.109
+*.json
+*.xlsx
+*.png
+
+# Python / OS clutter
+__pycache__/
+*.pyc
+.DS_Store
